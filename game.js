@@ -39,7 +39,7 @@ $("input").keypress(function(event) {
   }
   else
   {
-    alert("Enter S key to start Game");
+ 
 
   }
 
