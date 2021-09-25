@@ -17,35 +17,31 @@ $(document).keypress(function(event) {
     nextSequence();
     started = false;
   }
-  else
-  {
-    alert("Enter S key to start Game");
-
-  }
-
-  }
-
-});
-
-
-$("input").keypress(function(event) {
- var keypress=event.key;
-
-  if (started) {
-  if (keypress==="s") {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = false;
-  }
-  else
-  {
  
 
   }
 
+});
+$("button").click(function()
+{
+var value=$("input").val();
+ if (started) {
+  if (value==="s") {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = false;
+  }
+ else
+ {
+  alert("Enter "s" key to Start");
+
+ }
+
   }
 
+
 });
+
 
 
 $(".btn").click(function() {
