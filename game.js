@@ -17,31 +17,15 @@ $(document).keypress(function(event) {
     nextSequence();
     started = false;
   }
+  else
+  {
+    alert("Enter S key To play ");
+  }
  
 
   }
 
 });
-$("button").click(function()
-{
-var value=$("input").val();
- if (started) {
-  if (value==="s") {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = false;
-  }
- else
- {
-  alert("Enter s key to Start");
-
- }
-
-  }
-
-
-});
-
 
 
 $(".btn").click(function() {
