@@ -33,7 +33,7 @@ var value=$("input").val();
   }
  else
  {
-  alert("Enter "s" key to Start");
+  alert("Enter s key to Start");
 
  }
 
