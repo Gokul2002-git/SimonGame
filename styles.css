@@ -58,8 +58,14 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
 footer
 {
+  margin-top: 50px;
   color: white;
   font-size: 20px;
+}
+label
+{
+  color: white;
 }

@@ -8,13 +8,45 @@ var started = true;
 var level = 0;
 var highscore=0;
 
-$(document).keypress(function() {
+$(document).keypress(function(event) {
+ var keypress=event.key;
+
   if (started) {
+  if (keypress==="s") {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = false;
   }
+  else
+  {
+    alert("Enter S key to start Game");
+
+  }
+
+  }
+
 });
+
+
+$("input").keypress(function(event) {
+ var keypress=event.key;
+
+  if (started) {
+  if (keypress==="s") {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = false;
+  }
+  else
+  {
+    alert("Enter S key to start Game");
+
+  }
+
+  }
+
+});
+
 
 $(".btn").click(function() {
 
@@ -39,7 +71,7 @@ function checkAnswer(currentLevel) {
     else {
       playSound("wrong");
       $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Press S Key to Restart");
     
       setTimeout(function () {
         $("body").removeClass("game-over");
@@ -58,6 +90,7 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
     $("#highscore").text("Highscore : "+ highscore);
+
     highscore=highscore+5;
 
 
